@@ -3,20 +3,30 @@ import PropTypes from 'prop-types'
 import './media.css';
 
 class Media extends Component {
+    state = {
+        author: 'Ismaeljdz77'
+    }
     // constructor(props){
     //     super(props)
+    //     this.state = {
+    //         author: props.author
+    //     }
     //     //console.log(this)
-    //     this.handleClick = this.handleClick.bind(this);
+    //     //this.handleClick = this.handleClick.bind(this);
     // }
     handleClick = (event) => {
-        console.log(this.props.image)
+        //console.log(this.props.image)
+        this.setState({
+            author: 'Ismaeljdz7',
+        })
     }
-    handleClick(event){
-        console.log(this.props.title);
-    }
+    // handleClick(event){
+    //     console.log(this.props.title);
+    // }
     render(){
 
-        let { title, author, image } = this.props;
+        let { title, image } = this.props;
+        let { author } = this.state;
 
         const styles = {
             container: {
