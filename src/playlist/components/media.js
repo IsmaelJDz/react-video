@@ -25,7 +25,7 @@ class Media extends Component {
     // }
     render(){
 
-        let { title, image } = this.props;
+        let { title, cover } = this.props;
         let { author } = this.state;
 
         const styles = {
@@ -41,9 +41,9 @@ class Media extends Component {
             <div className="Media" onClick={this.handleClick}>
                 <div className="Media-cover">
                     <img className="Media-image"
-                        src={image}
+                        src={cover}
                         alt=""
-                        width={260}
+                        width={240}
                         height={160}
                     />
                     <h3 className="Media-title">{title}</h3>
@@ -59,6 +59,7 @@ Media.propTypes = {
     title: PropTypes.string,
     author: PropTypes.string,
     type: PropTypes.oneOf(['video', 'audio' ]).isRequired,
+    //type: PropTypes.oneOf(['video', 'audio' ]),
 }
 
 export default Media;
